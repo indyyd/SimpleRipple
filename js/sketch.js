@@ -1,11 +1,22 @@
-function setup() {
-    var canvas = createCanvas(800, 800);
-    canvas.parent("p5container");
-}
+var outerDiam = 0;
 
-function draw() {
-    background(220);
+function setup() { 
+  createCanvas(400, 400);
+} 
 
-    fill(255, 255, 255);
-    ellipse(400, 400, 200);
+function draw() { 
+  background(255);
+  
+  for (var i = 0; i < 5; i++){
+		var diam = outerDiam - 30 * i;    
+    if (diam > 0){
+      
+      var fade = map(diam, 0, width, 0, 255);
+			stroke(fade);
+      noFill();
+      ellipse(200, 200, diam);
+    }
+  }
+  
+  outerDiam = outerDiam + 2;
 }
