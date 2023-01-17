@@ -20,3 +20,19 @@ function draw() {
   
   outerDiam = outerDiam + 2;
 }
+
+function keyPressed(){
+  if (keyCode === LEFT_ARROW) {
+       outerDiam = random(0, 400);
+       playSynth1();
+   } else if (keyCode === UP_ARROW) {
+       outerDiam = random(0, 400);
+       playSynth2();
+   } else if (keyCode === DOWN_ARROW) {
+       outerDiam = random(0, 400);
+       playSynth3();
+   } else if (keyCode === RIGHT_ARROW) {
+       outerDiam = random(0, 400);
+       playSynth4();
+   }
+}
